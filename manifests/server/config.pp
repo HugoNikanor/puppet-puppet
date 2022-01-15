@@ -249,8 +249,8 @@ class puppet::server::config inherits puppet::config {
 
     file { $puppet::vardir:
       ensure => directory,
-      owner  => 'root',
-      group  => 'root',
+      owner  => 'puppet',
+      group  => 'puppet',
     }
 
     git::repo { 'puppet_repo':
